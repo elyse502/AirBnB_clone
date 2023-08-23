@@ -255,7 +255,7 @@ $ python3 -m unittest tests/test_console.py
 
 ## Authors :black_nib:
 1. _[NIYIBIZI Elysée](https://mail.google.com/mail/u/0/#inbox) | [Github](https://github.com/elyse502) | [Linkedin](https://www.linkedin.com/in/niyibizi-elys%C3%A9e/) | [Twitter](https://twitter.com/Niyibizi_Elyse)._
-2. _Joseph Kimuchu | [Github](https://github.com/KimuchuJr) | [Linkedin](https://www.linkedin.com/in/joseph-kimuchu-2a6031224/)_
+2. _Joseph Kimuchu | [Github](https://github.com/KimuchuJr) | [Linkedin](https://www.linkedin.com/in/joseph-kimuchu-2a6031224/)._
 
 
 <p align="center">
