@@ -309,8 +309,66 @@ Requirements:
 
 <img width="2160" alt="98f4ac1b0644512ce7ae91a9e8e61e8fe174911d" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/868930eb-362d-493f-8548-24c7f130de90">
 
+## 1. Head styling: [1-index.html](1-index.html)
+An HTML page that displays a header and a footer by using the `style` tag in the `head` tag (same as `0-index.html`)
 
+Requirements:
+* You must use the `header` and `footer` tags
+* You are not allowed to import any files
+* No inline styling
+* You must use the `style` tag in the `head` tag
 
+The layout must be exactly the same as `0-index.html`
+
+## 2. CSS files: [2-index.html](2-index.html), [styles/2-common.css](styles/2-common.css), [styles/2-header.css](styles/2-header.css), [styles/2-footer.css](styles/2-footer.css)
+An n HTML page that displays a header and a footer by using CSS files (same as `1-index.html`)
+
+Requirements:
+* You must use the `header` and `footer` tags
+* No inline styling
+* You must have 3 CSS files:
+  * `styles/2-common.css`: for global style (i.e. the `body` style)
+  * `styles/2-header.css`: for header style
+  * `styles/2-footer.css`: for footer style
+
+The layout must be exactly the same as `1-index.html`
+
+## 3. Zoning done!: [3-index.html](3-index.html), [styles/3-common.css](styles/3-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [images/](images/)
+An HTML page that displays a header and footer by using CSS files (same as `2-index.html`)
+
+Layout:
+* Common:
+  * no margin
+  * no padding
+  * font color: #484848
+  * font size: 14px
+  * font family: `Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;`
+  * [icon](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon.png) in the browser tab
+* Header:
+  * color: white
+  * height: 70px
+  * width: 100%
+  * border bottom 1px #CCCCCC
+  * [logo](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/logo.png) align on left and center vertically (20px space at the left)
+* Footer:
+  * color white
+  * height: 60px
+  * width: 100%
+  * border top 1px #CCCCCC
+  * text `Best School` center vertically and horizontally
+  * always at the bottom at the page
+
+Requirements:
+* No inline style
+* You are not allowed to use the `img` tag
+* You are not allowed to use the `style` tag in the `head` tag
+* All images must be stored in the `images` folder
+* You must have 3 CSS files:
+  * `styles/3-common.css`: for the global style (i.e `body` style)
+  * `styles/3-header.css`: for the header style
+  * `styles/3-footer.css`: for the footer style
+
+<img width="2160" alt="2be1eda05a0d9097c210f2d3482a59aa858c5711" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/b1313ef7-d7f8-44af-947a-c7e80a71f5da">
 
 
 
