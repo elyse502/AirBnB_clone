@@ -370,18 +370,121 @@ Requirements:
 
 <img width="2160" alt="2be1eda05a0d9097c210f2d3482a59aa858c5711" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/b1313ef7-d7f8-44af-947a-c7e80a71f5da">
 
+## 4. Search!: [4-index.html](4-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/4-filters.css](styles/4-filters.css), [images/](images/)
+An HTML page that displays a header, footer and a filters box with a search button.
 
+Layout: (based on 3-index.html)
+* Container:
+  * between `header` and `footer` tags, add a `div`:
+      * classname: `container`
+      * max width 1000px
+      * margin top and bottom 30px - it should be 30px under the bottom of the `header` (screenshot)
+      * center horizontally
+* Filter section:
+  * tag `section`
+  * classname filters
+  * inside the `.container`
+  * color white
+  * height: 70px
+  * width: 100% of the container
+  * border 1px #DDDDDD with radius 4px
+* Button search:
+  * tag `button`
+  * text `Search`
+  * font size: 18px
+  * inside the section filters
+  * background color #FF5A5F
+  * text color #FFFFFF
+  * height: 48px
+  * width: 20% of the section filters
+  * no borders
+  * border radius: 4px
+  * center vertically and at 30px of the right border
+  * change opacity to 90% when the mouse is on the button
 
+Requirements:
+* You must use: `header`, `footer`, `section`, `button` tags
+* No inline style
+* You are not allowed to use the `img` tag
+* You are not allowed to use the `style` tag in the `head` tag
+* All images must be stored in the `images` folder
+* You must have 4 CSS files:
+  * `styles/4-common.css`: for the global style (`body` and `.container` styles)
+  * `styles/3-header.css`: for the header style
+  * `styles/3-footer.css`: for the footer style
+  * `styles/4-filters.css`: for the filters style
+* `4-index.htm` **won’t be W3C valid**, don’t worry, it’s temporary
 
+<img width="2160" alt="f959154b0cdf1cdf71ddef04e3787ef28462793e" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/9c60c3ba-de6f-4f5c-b3b2-c8f59ecf1c33">
 
+## 5. More filters: [5-index.html](5-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/5-filters.css](styles/5-filters.css), [images/](images/)
+An HTML page that displays a header, footer and a filters box.
 
+Layout: (based on `4-index.html`)
+* Locations and Amenities filters:
+  * tag: `div`
+  * classname: locations for `location` tag and `amenities` for the other
+  * inside the section filters (same level as the `button` Search)
+  * height: 100% of the section filters
+  * width: 25% of the section filters
+  * border right #DDDDDD 1px only for the first left filter
+  * contains a title:
+      * tag: `h3`
+      * font weight: 600
+      * text `States` or `Amenities`
+  * contains a subtitle:
+      * tag: `h4`
+      * font weight: 400
+      * font size: 14px
+      * text with fake contents
 
+Requirements:
+* You must use: `header`, `footer`, `section`, `button`, `h3`, `h4` tags
+* No inline style
+* You are not allowed to use the `img` tag
+* You are not allowed to use the `style` tag in the `head` tag
+* All images must be stored in the `images` folder
+* You must have 4 CSS files:
+    * `styles/4-common.css`: for the global style (`body` and `.container` styles)
+    * `styles/3-header.css`: for the header style
+    * `styles/3-footer.css`: for the footer style
+    * `styles/5-filters.css`: for the filters style
 
+<img width="2160" alt="85bfa50b96c2985723daa75b5e22f75ef16e2b2e" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/bb78f403-2f99-4c53-8f5a-530754f87392">
 
+## 6. It's (h)over: [6-index.html](6-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/6-filters.css](styles/6-filters.css), [images/](images/)
+An HTML page that displays a header, footer and a filters box with dropdown.
 
+Layout: (based on `5-index.html`)
+* Update Locations and Amenities filters to display a contextual dropdown when the mouse is on the filter `div`:
+  * tag `ul`
+  * classname `popover`
+  * text should be fake now
+  * inside each `div`
+  * not displayed by default
+  * color #FAFAFA
+  * width same as the `div` filter
+  * border #DDDDDD 1px with border radius 4px
+  * no list display
+  * Location filter has 2 levels of `ul`/`li`:
+    * state -> cities
+    * state name must be display in a `h2` tag (font size 16px)
 
+Requirements:
+* You must use: `header`, `footer`, `section`, `button`, `h3`, `h4`, `ul`, `li` tags
+* No inline style
+* You are not allowed to use the `img` tag
+* You are not allowed to use the `style` tag in the `head` tag
+* All images must be stored in the `images` folder
+* You must have 4 CSS files:
+    * `styles/4-common.css`: for the global style (`body` and `.container` styles)
+    * `styles/3-header.css`: for the header style
+    * `styles/3-footer.css`: for the footer style
+    * `styles/6-filters.css`: for the filters style
 
+<img width="2160" alt="6262f13624dca23ca19db505c44f88faddb82ebb" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/b0ac0582-9270-4e18-92e5-b87cde13b623">
 
+<img width="2160" alt="6e6bdfa13fa88a5f439d9e2b1dade826dd95529b" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/7ce1d2a8-8fb7-43c8-be03-43ee87181f79">
 
 
 
