@@ -105,27 +105,27 @@ More about `float` and `clear`: http://www.w3schools.com/css/css_float.asp
 Because more recent options are not entirely mature yet, a lot of websites are still being made with floating layout.
 
 ## CSS Display Table
-It took long years for the W3C to have consensus on some layout specifications, and display table is one of the first ones that made it maturity. The idea is to take some HTML that doesn’t contain the <table> element, but make it behave like tables just with CSS.
+It took long years for the W3C to have consensus on some layout specifications, and display table is one of the first ones that made it maturity. The idea is to take some HTML that doesn’t contain the `<table>` element, but make it behave like tables just with CSS.
 It had been moderately popular, but it never rose to widespread uses, because one could not manage every layout use case this way.
 
-CSS Flexbox
+## CSS Flexbox
 As a far more powerful alternative to CSS Display Table, CSS Flexbox has huge support from the browsers and the industry, despite the implementations in browsers not being 100% consistent in all cases. Many websites and web applications in the industry use CSS Flexbox: some mentors working at Salesforce confirmed that all applications are now built using it; another mentor working on Google Photos confirmed that it is what is being used there too. And for widespread adoption, the most used CSS frameworks are now switching to Flexbox, one by one.
 
 Here is an excellent and fun tutorial for learning Flexbox: http://flexboxfroggy.com
 
-The other ones?
+## The other ones?
 Other CSS layout specifications are in the work at the W3C, such as CSS Grid; but none of them seem near maturity at all at this point. And it can be argued that the support CSS Flexbox is getting could actually be detrimental to them, since the industry seems gradually happy with it.
 
-CSS Media Queries and Responsive Web Design
+## CSS Media Queries and Responsive Web Design
 Another recent interesting piece of recent CSS history is the introduction of the CSS Media Queries, and the concept of Responsive Web Design.
 
 Media queries allow to express that certain CSS rules should only be executed when certain conditions are in place (such as based on the screen’s resolution, or the number of colors a graphics card can handle). But the one condition that started to get very used, is the one allowing to only execute some CSS depending on the browser’s width. As you may have understood, this allows a single CSS codebase for a website regardless of the size of the browser, enabling and disabling some CSS rules when it passes certain width thresholds.
 
 Do you remember Jeffrey Zeldman? (He’s the guy who founded A List Apart, the Web Standards Project, and wrote Designing with Web Standards) He’s part of the people who actually came up with the notion of Responsive Web Design, the idea to use media queries to make a single website adapt depending on the browser’s width.
 
-Media query syntax
+## Media query syntax
 It looks like this:
-
+```
 @media screen and (min-width:600px) {
   nav {
     float: left;
@@ -135,25 +135,27 @@ It looks like this:
     margin-left: 25%;
   }
 }
+```
 The above CSS rules will only apply when the browser displays the webpage on a screen (as opposed to printed on paper, for instance), and the browser’s window is at least 600px wide.
 
 More about media queries: http://www.w3schools.com/css/css_rwd_mediaqueries.asp
 
-Viewport
+## Viewport
 Feature phones (the things that came before smartphones) didn’t “zoom pages out” when displaying a non-mobile webpage so that you could see the whole page; you would simply see a corner of the webpage that was the size of your phone’s screen, and had to swipe around to see the rest.
 When Apple introduced the iPhone in 2007, it introduced the notion of viewport: the width of the phone would, by default, not be displaying the same small width of the webpage; it would display 1024px on a device that really is 320px wide. Instead of swiping around to see each bit of the webpage, you would have to zoom in to read texts. Soon, all other smartphones adopted the same behavior.
 The way to describe it is: although the screen is 320px wide, its viewport (what it really displays of a webpage) is 1024px wide.
 
 But this would create problems with responsive websites, as you actively want them to display the real width of the screen. Therefore, Apple introduced a HTML tag to override the viewport the browser, which all other browsers implemented later too. This is what developers typically set it as for fluid designs such as responsive web designs:
-
+```
 <meta name="viewport" content="width=device-width, initial-scale=1">
+```
 More about the viewport: https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag
 
-Some links
-Many of the CSS concepts on this page are introduced and demoed on this very visual and well-polished website: http://learnlayout.com
-“Like the CSS spec, but readable”, according to Kaelig (one of your mentors who is a front-end engineer at Salesforce): http://book.mixu.net/css/
+## Some links
+* Many of the CSS concepts on this page are introduced and demoed on this very visual and well-polished website: http://learnlayout.com
+* “Like the CSS spec, but readable”, according to Kaelig (one of your mentors who is a front-end engineer at Salesforce): http://book.mixu.net/css/
 
-
+# 2. 
 
 
 
