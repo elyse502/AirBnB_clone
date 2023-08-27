@@ -220,6 +220,109 @@ Typically, the way measures are done is:
 
  _This is Google Chrome’s diagnostic of the stackoverflow.com website, with cache cleared. As you can see, the back-end performance of generating the HTML page is 180ms (actually way less, if you remove the round-trip the data is doing) out of 1.30s to finish. Load time is 1.11s, which is not too bad!_
 
+# Background Context
+## Web static, what?
+Now that you have a command interpreter for managing your AirBnB objects, it’s time to make them alive!
+
+Before developing a big and complex web application, we will build the front end step-by-step.
+
+The first step is to “design” / “sketch” / “prototype” each element:
+* Create simple HTML static pages
+* Style guide
+* Fake contents
+* No Javascript
+* No data loaded from anything
+
+During this project, you will learn how to manipulate HTML and CSS languages. HTML is the structure of your page, it should be the first thing to write. CSS is the styling of your page, the design. I really encourage you to fix your HTML part before starting the styling. Indeed, without any structure, you can’t apply any design.
+
+Before starting, please fork or clone the repository `AirBnB_clone` from your partner if you were not the owner of the previous project.
+
+# Resources🏗️
+### Read or watch:
+* [Learn to Code HTML & CSS](https://learn.shayhowe.com/html-css/) (_until “Creating Lists” included_)
+* [Inline Styles in HTML](https://www.codecademy.com/article/html-inline-styles)
+* [Specifics on CSS Specificity](https://css-tricks.com/specifics-on-css-specificity/)
+* [CSS SpeciFishity](https://www.standardista.com/cgi-sys/suspendedpage.cgi)
+* [Introduction to HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
+* [MDN](https://developer.mozilla.org/en-US/)
+* [center boxes](https://css-tricks.com/centering-css-complete-guide/)
+
+# General
+* What is HTML
+* How to create an HTML page
+* What is a markup language
+* What is the DOM
+* What is an element / tag
+* What is an attribute
+* How does the browser load a webpage
+* What is CSS
+* How to add style to an element
+* What is a class
+* What is a selector
+* How to compute CSS Specificity Value
+* What are Box properties in CSS
+
+# Requirements
+## General
+* Allowed editors: `vi`, `vim`, `emacs`
+* All your files should end with a new line
+* A `README.md` file, at the root of the folder of the project, is mandatory
+* Your code should be W3C compliant and validate with [W3C-Validator](https://github.com/alx-tools/W3C-Validator)
+* All your CSS files should be in `styles` folder
+* All your images should be in `images` folder
+* You are not allowed to use `!important` and `id` (`#...` in the CSS file)
+* You are not allowed to use tags `img`, `embed` and `iframe`
+* You are not allowed to use Javascript
+* Current screenshots have been done on `Chrome 56` or more.
+* No cross browsers
+* You have to follow all requirements but some `margin`/`padding` are missing - you should try to fit as much as you can to screenshots
+
+# More Info
+
+![hbnb_step1](https://github.com/elyse502/AirBnB_clone/assets/125453474/4b8e54fb-5e71-4968-825d-79300962387f)
+
+# Tasks📃
+## 0. Inline styling: [0-index.html](0-index.html)
+An HTML page that displays a header and a footer.
+
+Layout:
+* Body:
+  * no margin
+  * no padding
+* Header:
+  * color #FF0000 (red)
+  * height: 70px
+  * width: 100%
+* Footer:
+  * color #00FF00 (green)
+  * height: 60px
+  * width: 100%
+  * text `Best School` center vertically and horizontally
+  * always at the bottom at the page
+
+Requirements:
+* You must use the `header` and `footer` tags
+* You are not allowed to import any files
+* You are not allowed to use the `style` tag in the `head` tag
+* Use inline styling for all your tags
+
+<img width="2160" alt="98f4ac1b0644512ce7ae91a9e8e61e8fe174911d" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/868930eb-362d-493f-8548-24c7f130de90">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
