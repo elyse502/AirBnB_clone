@@ -3,7 +3,7 @@ _For this project, we expect you to look at these concepts:_
 * [HTML/CSS](https://intranet.alxswe.com/concepts/2)
 * [The trinity of front-end quality](https://intranet.alxswe.com/concepts/4)
 
-## HTML/CSS
+## 1. HTML/CSS
 Open web technologies (such as HTML and CSS) have three most peculiar particularities compared to other technologies:
 * Because anyone is meant to be allowed to code an interpreter for those languages (that what browsers are!), people making decisions on those technologies are part of an open consortium of companies (called the W3C), which operates on consensus; therefore they evolve rather slowly.
 * Reverse compatibility is among the most important values kept in mind when deciding on evolutions, because newest browsers should keep being able to run older websites, and older browsers should be able to access newest websites.
