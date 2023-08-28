@@ -491,21 +491,21 @@ An HTML page that displays a header, footer, a filters box with dropdown and res
 
 Layout: (based on `6-index.html`)
 * Add Places section:
-  * tag: section
-  * classname: places
-  * same level as the filters section, inside .container
+  * tag: `section`
+  * classname: `places`
+  * same level as the filters section, inside `.container`
   * contains a title:
-      * tag: h1
-      * text: Places
+      * tag: `h1`
+      * text: `Places`
       * align in the top left
       * font size: 30px
   * contains multiple “Places” as listing (horizontal or vertical) describe by:
-      * tag: article
+      * tag: `article`
       * width: 390px
       * padding and margin 20px
       * border #FF5A5F 1px with radius 4px
       * contains the place name:
-          * tag: h2
+          * tag: `h2`
           * font size: 30px
           * center horizontally
 
@@ -524,11 +524,69 @@ Requirements:
 
 <img width="2160" alt="bca4d17fbe21a58b66a9d5d6b85df4801d147dd0" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/1dc61beb-d910-4337-b27f-dce3fd7edb65">
 
+## 8. More details: [8-index.html](8-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/6-filters.css](styles/6-filters.css), [styles/8-places.css](styles/8-places.css), [images/](images/)
+An HTML page that displays a header, a footer, a filter box (dropdown list) and the result of the search.
 
+Layout: (based on `7-index.html`)
 
+Add more information to a Place article:
+* Price by night:
+  * tag: `div`
+  * classname: `price_by_night`
+  * same level as the place name
+  * font color: #FF5A5F
+  * border: #FF5A5F 4px rounded
+  * min width: 60px
+  * height: 60px
+  * font size: 30px
+  * align: the top right (with space)
+* Information section:
+  * tag: `div`
+  * classname: `information`
+  * height: 80px
+  * border: top and bottom #DDDDDD 1px
+  * contains (align vertically):
+      * Number of guests:
+          * tag: `div`
+          * classname: `max_guest`
+          * width: 100px
+          * fake text
+          * [icon](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_group.png)
+      * Number of bedrooms:
+          * tag: `div`
+          * classname: `number_rooms`
+          * width: 100px
+          * fake text
+          * [icon](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bed.png)
+      * Number of bathrooms:
+          * tag: `div`
+          * classname: `number_bathrooms`
+          * width: 100px
+          * fake text
+          * [icon](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bath.png)
+* User section:
+  * tag: `div`
+  * classname: `user`
+  * text `Owner: <fake text>`
+  * `Owner` text should be in bold
+* Description section:
+  * tag: `div`
+  * classname: `description`
 
+Requirements:
+* You must use: `header`, `footer`, `section`, `article`, `button`, `h1`, `h2` `h3`, `h4`, `ul`, `li` tags
+* No inline style
+* You are not allowed to use the `img` tag
+* You are not allowed to use the `style` tag in the `head` tag
+* All images must be stored in the `images` folder
+* You must have 5 CSS files:
+    * `styles/4-common.css`: for the global style (`body` and `.container` styles)
+    * `styles/3-header.css`: for the header style
+    * `styles/3-footer.css`: for the footer style
+    * `styles/6-filters.css`: for the filters style
+    * `styles/7-places.css`: for the places style
 
-
+<img width="1604" alt="f4b2d4ef94bd3a2e7e1ddefa81236595686d270e" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/98a1db79-51ce-4096-9b4e-747c05da5bac">
 
 
 
