@@ -742,7 +742,7 @@ Update `models/base_model.py`: to link your `BaseModel` to `FileStorage` by usin
 * import the variable `storage`
 * in the method `save(self)`:
     * call `save(self)` method of `storage`
-* __init__(self, *args, **kwargs):
+* `__init__(self, *args, **kwargs)`:
     * if it’s a new instance (not from a dictionary representation), add a call to the method `new(self)` on `storage`
 ```
 guillaume@ubuntu:~/AirBnB$ cat test_save_reload_base_model.py
@@ -791,8 +791,42 @@ guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
 {"BaseModel.e79e744a-55d4-45a3-b74a-ca5fae74e0e2": {"__class__": "BaseModel", "id": "e79e744a-55d4-45a3-b74a-ca5fae74e0e2", "updated_at": "2017-09-28T21:08:06.151750", "created_at": "2017-09-28T21:08:06.151711", "name": "My_First_Model", "my_number": 89}, "BaseModel.080cce84-c574-4230-b82a-9acb74ad5e8c": {"__class__": "BaseModel", "id": "080cce84-c574-4230-b82a-9acb74ad5e8c", "updated_at": "2017-09-28T21:07:51.973308", "created_at": "2017-09-28T21:07:51.973301", "name": "My_First_Model", "my_number": 89}, "BaseModel.ee49c413-023a-4b49-bd28-f2936c95460d": {"__class__": "BaseModel", "id": "ee49c413-023a-4b49-bd28-f2936c95460d", "updated_at": "2017-09-28T21:07:25.047381", "created_at": "2017-09-28T21:07:25.047372", "name": "My_First_Model", "my_number": 89}}
 guillaume@ubuntu:~/AirBnB$
 ```
+## 6. Console 0.0.1: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
+A program called `console.py` that contains the entry point of the command interpreter:
+* You must use the module `cmd`
+* Your class definition must be: class `HBNBCommand(cmd.Cmd):`
+* Your command interpreter should implement:
+    * `quit` and `EOF` to exit the program
+    * `help` (this action is provided by default by `cmd` but you should keep it updated and documented as you work through tasks)
+    * a custom prompt: `(hbnb)`
+    * an empty line + `ENTER` shouldn’t execute anything
+* Your code should not be executed when imported
 
+### Warning:
+You should end your file with:
+```
+if __name__ == '__main__':
+    HBNBCommand().cmdloop()
+```
+to make your program executable except when imported. Please don’t add anything around - the Checker won’t like it otherwise
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) help
 
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb) 
+(hbnb) help quit
+Quit command to exit the program
+
+(hbnb) 
+(hbnb) 
+(hbnb) quit 
+guillaume@ubuntu:~/AirBnB$ 
+```
+#### No unittests needed
 
 
 
