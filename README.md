@@ -257,6 +257,8 @@ $ python3 -m unittest tests/test_console.py
 1. _[NIYIBIZI Elysée](https://mail.google.com/mail/u/0/#inbox) | [Github](https://github.com/elyse502) | [Linkedin](https://www.linkedin.com/in/niyibizi-elys%C3%A9e/) | [Twitter](https://twitter.com/Niyibizi_Elyse)._
 2. _Joseph Kimuchu | [Github](https://github.com/KimuchuJr) | [Linkedin](https://www.linkedin.com/in/joseph-kimuchu-2a6031224/)._
 
+## Acknowledgements 🤝
+All work contained in this project was completed as part of the curriculum for Alx-Holberton School. Alx-Holberton School is a Remote-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit [This link](https://www.alxafrica.com/).
 
 <p align="center">
 <h2 align="center"><img align="center" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/ab3c1e01-2b98-47ae-96b7-37c07c85a2f1" alt="footer" width="150"  height="150"/></h2>
