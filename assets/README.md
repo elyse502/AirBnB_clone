@@ -538,6 +538,36 @@ All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest
 
 ![815046647d23428a14ca](https://github.com/elyse502/AirBnB_clone/assets/125453474/850db2f3-a0e2-4c18-bb54-eb4a491705a0)
 
+# Tasks📃
+## 0. README, AUTHORS: [AirBnB_clone](AirBnB_clone)
+A `README.md`:
+* description of the project
+* description of the command interpreter:
+    * how to start it
+    * how to use it
+    * examples
+* You should have an `AUTHORS` file at the root of your repository, listing all individuals having contributed
+* content to the repository. For format, reference [Docker’s AUTHORS page](https://github.com/moby/moby/blob/master/AUTHORS)
+* You should use branches and pull requests on GitHub - it will help you as team to organize your work
+
+## 1. Be pycodestyle compliant!: [AirBnB_clone](AirBnB_clone)
+Beautiful code that passes the pycodestyle checks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
