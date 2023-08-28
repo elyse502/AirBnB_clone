@@ -640,14 +640,26 @@ Requirements:
 
 <img width="2160" alt="f54486a431a05ea3477e337e0e953686d3c6ffd0" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/24ee9e61-b92c-43f7-82f2-9b1fea3e9d4f">
 
+## 10. Flex: [101-index.html](101-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/6-filters.css](styles/6-filters.css), [styles/101-places.css](styles/101-places.css), [images/](images/)
+Improve the Places section by using [Flexible boxes](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for all Place articles
 
+[Flexbox Froggy](https://flexboxfroggy.com/)
 
+## 11. Responsive design: [102-index.html](102-index.html), [styles/102-common.css](styles/102-common.css), [styles/102-header.css](styles/102-header.css), [styles/102-footer.css](styles/102-footer.css), [styles/102-filters.css](styles/102-filters.css), [styles/102-places.css](styles/102-places.css), [images/](images/)
+mprove the page by adding [responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) to display correctly in mobile or small screens.
 
+Examples:
+* no horizontal scrolling
+* redesign search bar depending of the width
+* etc.
 
+## 12. Accessibility: [103-index.html](103-index.html), [styles/103-common.css](styles/103-common.css), [styles/103-header.css](styles/103-header.css), [styles/103-footer.css](styles/103-footer.css), [styles/103-filters.css](styles/103-filters.css), [styles/103-places.css](styles/103-places.css), [images/](images/)
+Improve the page by adding [Accessibility support](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
 
-
-
-
+Examples:
+* Colors contrast
+* Header tags
+* etc.
 
 
 
