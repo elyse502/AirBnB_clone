@@ -1006,8 +1006,110 @@ Write all those classes that inherit from `BaseModel`:
         * `user_id`: string - empty string: it will be the `User.id`
         * `text`: string - empty string
 
+## 10. Console 1.0: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py), [models/engine/file_storage.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/engine/file_storage.py), [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
+Update `FileStorage` to manage correctly serialization and deserialization of all our new classes: `Place`, `State`, `City`, `Amenity` and `Review`
 
+Update your command interpreter (`console.py`) to allow those actions: `show`, `create`, `destroy`, `update` and `all` with all classes created previously.
 
+Enjoy your first console!
+
+#### No unittests needed for the console
+
+## 11. All instances by class name: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
+Update your command interpreter (`console.py`) to retrieve all instances of a class by using: `<class name>.all()`.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.all()
+[[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}, [User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}]
+(hbnb)
+``` 
+#### No unittests needed
+
+## 12. Count instances: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
+Update your command interpreter (console.py) to retrieve the number of instances of a class: `<class name>.count()`.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.count()
+2
+(hbnb)
+```
+#### No unittests needed
+
+## 13. Show: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
+Update your command interpreter (`console.py`) to retrieve an instance based on its ID: `<class name>.show(<id>)`.
+
+Errors management must be the same as previously.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.show("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}
+(hbnb) User.show("Bar")
+** no instance found **
+(hbnb) 
+```
+#### No unittests needed
+
+## 14. Destroy: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
+Update your command interpreter (`console.py`) to destroy an instance based on his ID: `<class name>.destroy(<id>)`.
+
+Errors management must be the same as previously.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.count()
+2
+(hbnb) User.destroy("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+(hbnb) User.count()
+1
+(hbnb) User.destroy("Bar")
+** no instance found **
+(hbnb) 
+````
+#### No unittests needed
+
+## 15. Update: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
+Update your command interpreter (`console.py`) to update an instance based on his ID: `<class name>.update(<id>, <attribute name>, <attribute value>)`.
+
+Errors management must be the same as previously.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb)
+(hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", "first_name", "John")
+(hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", "age", 89)
+(hbnb)
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 89, 'first_name': 'John', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 15, 32, 299055), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb) 
+```
+#### No unittests needed
+
+## 16. Update from dictionary: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
+Update your command interpreter (`console.py`) to update an instance based on his ID with a dictionary: `<class name>.update(<id>, <dictionary representation>)`.
+
+Errors management must be the same as previously.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 23, 'first_name': 'Bob', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 15, 32, 299055), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb) 
+(hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", {'first_name': "John", "age": 89})
+(hbnb) 
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 89, 'first_name': 'John', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 17, 10, 788143), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb) 
+```
+#### No unittests needed
+
+## 17. Unittests for the Console!: [tests/test_console.py](https://github.com/elyse502/AirBnB_clone/blob/master/tests/test_console.py)
+Write all unittests for `console.py`, all features!
+
+For testing the console, you should “intercept” STDOUT of it, we highly recommend you to use:
+```
+with patch('sys.stdout', new=StringIO()) as f:
+    HBNBCommand().onecmd("help show")
+```
+Otherwise, you will have to re-write the console by replacing `precmd` by `default`.
 
 
 
