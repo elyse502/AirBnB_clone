@@ -11,7 +11,7 @@ _For this project, we expect you to look at these concepts:_
 # 1. Python packages
 Read: [Packages](https://docs.python.org/3.4/tutorial/modules.html#packages)
 
-A Python file can be a **module** but when this file is in a folder, we call this folder a package.
+A Python file can be a **module** but when this file is in a folder, we call this folder a **package**.
 
 File organization is really important in a big project. This means for Python: packages everywhere.
 
@@ -21,31 +21,31 @@ File organization is really important in a big project. This means for Python: p
 In C: `#include "abs.h"`
 
 In Python:
-```
+```groovy
 import abs
 abs.my_abs(89)
 ```
 or
-```
+```groovy
 from abs import my_abs
 my_abs(89)
 ```
-In C: #include "my_math/abs.h"
+In C: `#include "my_math/abs.h"`
 
 In Python:
-```
+```groovy
 from my_math.abs import my_abs
 my_abs(89)
 ```
 or
-```
+```groovy
 import my_math.abs
 my_math.abs.my_abs(89)
 ```
 
 ## Dotted module names == Path
 Let’s take this example of file organization:
-```
+```groovy
 my_script.py
 my_math/
     abs.py
@@ -63,10 +63,10 @@ NO! something is missing: the magic file `__init__.py`
 
 Indeed, each folder must contain this file to be considered a package.
 
-This file should be empty except if you want to import all the content of modules by using *.
+This file should be empty except if you want to import all the content of modules by using `*`.
 
 More complicated?
-```
+```groovy
 my_script.py
 my_math/
     __init__.py
@@ -84,7 +84,7 @@ Easy right?
 **`import *` is dangerous**
 
 Using `import *` is still considered bad practice in production code. In that case, `__init__.py` shouldn’t be empty but must contain the list of modules to load:
-```
+```groovy
 my_script.py
 my_math/
     __init__.py
@@ -96,7 +96,7 @@ my_math/
         mul.py
         div.py
 ```
-```
+```groovy
 $ cat my_script.py
 from my_math.functions import *
 print(add.my_add(1, 3))
@@ -118,7 +118,7 @@ $
 ```
 ## Relative versus Absolute import
 In this example:
-```
+```groovy
 my_script.py
 my_math/
     __init__.py
@@ -132,7 +132,7 @@ By importing: `from my_math.abs import my_abs` or `from abs import my_abs`
 What the difference?
 * `from abs import my_abs` is using a relative path between your file who imports and the module to import
 * `from my_math.abs import my_abs` is using an absolute path between the file you execute and the module to import
-```
+```groovy
 $ cat my_script.py
 from my_math.positive import is_positive
 print(is_positive(89))
@@ -146,7 +146,7 @@ True
 $
 ```
 Now, let’s execute a file in `my_math`:
-```
+```groovy
 $ cd my_math ; cat test_positive.py
 from positive import is_positive
 print(is_positive(89))
@@ -171,7 +171,7 @@ $
 Ahh! If you are using an absolute path, you can’t execute this module from another point as the “root” of your project.
 
 Let’s change to relative path:
-```
+```groovy
 $ cd my_math ; cat test_positive.py
 from positive import is_positive
 print(is_positive(89))
@@ -191,6 +191,9 @@ True
 $
 ```
 # 2. AirBnB clone
+
+![65f4a1dd9c51265f49d0](https://github.com/elyse502/AirBnB_clone/assets/125453474/acf08a8b-f4e4-47b6-b32e-25d73c434b32)
+
 I know you were waiting for it: it’s here!
 
 The AirBnB clone project starts now until… the end of the first year. The goal of the project is to deploy on your server a simple copy of the [AirBnB website](https://www.airbnb.com/).
@@ -290,7 +293,7 @@ You will always use class attributes for any object. Why not instance attributes
 
 ## How can I store my instances?
 That’s a good question. So let’s take a look at this code:
-```
+```groovy
 class Student():
     def __init__(self, name):
         self.name = name
@@ -300,7 +303,7 @@ s = Student("John")
 students.append(s)
 ```
 Here, I’m creating a student and store it in a list. But after this program execution, my Student instance doesn’t exist anymore.
-```
+```groovy
 class Student():
     def __init__(self, name):
         self.name = name
@@ -315,8 +318,8 @@ Nice!
 But how it works?
 
 First, let’s look at `save(students)`:
-* Can I write each `Student` object to a file => NO, it will be the memory representation of the object. For another program execution, this memory representation can’t be reloaded.
-* Can I write each `Student.name` to a file => YES, but imagine you have other attributes to describe `Student`? It would start to be become too complex.
+* Can I write each `Student` object to a file => _NO_, it will be the memory representation of the object. For another program execution, this memory representation can’t be reloaded.
+* Can I write each `Student.name` to a file => _YES_, but imagine you have other attributes to describe `Student`? It would start to be become too complex.
 
 The best solution is to convert this list of `Student` objects to a JSON representation.
 
@@ -330,23 +333,22 @@ And the `reload()`? now you know the file is a JSON file representing all `Stude
 
 ## File storage == JSON serialization
 For this first step, you have to write in a file all your objects/instances created/updated in your command interpreter and restore them when you start it. You can’t store and restore a Python instance of a class as “Bytes”, the only way is to convert it to a serializable data structure:
-* convert an instance to Python built in serializable data structure (list, dict, number and string) - for us it will be the method my_instance.to_json() to retrieve a dictionary
-* convert this data structure to a string (JSON format, but it can be YAML, XML, CSV…) - for us it will be a my_string = JSON.dumps(my_dict)
+* convert an instance to Python built in serializable data structure (list, dict, number and string) - for us it will be the method `my_instance.to_json()` to retrieve a dictionary
+* convert this data structure to a string (JSON format, but it can be YAML, XML, CSV…) - for us it will be a `my_string = JSON.dumps(my_dict)`
 * write this string to a file on disk
 
 And the process of deserialization?
 
 The same but in the other way:
 * read a string from a file on disk
-* convert this string to a data structure. This string is a JSON representation, so it’s easy to convert - for us it will be a my_dict = JSON.loads(my_string)
-* convert this data structure to instance - for us it will be a my_instance = MyObject(my_dict)
+* convert this string to a data structure. This string is a JSON representation, so it’s easy to convert - for us it will be a `my_dict = JSON.loads(my_string)`
+* convert this data structure to instance - for us it will be a `my_instance = MyObject(my_dict)`
 
-**`*args, **kwargs`**
+### `*args, **kwargs`
 
-`How To Use them`
-
+#### [`How To Use them`](https://www.digitalocean.com/community/tutorials/how-to-use-args-and-kwargs-in-python-3)
 How do you pass arguments to a function?
-```
+```groovy
 def my_fct(param_1, param_2):
     ...
 
@@ -355,7 +357,7 @@ my_fct("Best", "School")
 But with this function definition, you must call `my_fct` with 2 parameters, no more, no less.
 
 Can it be dynamic? Yes you can:
-```
+```groovy
 def my_fct(*args, **kwargs):
     ...
 
@@ -370,7 +372,7 @@ A dictionary? But why?
 So, to make it clear, `*args` is the list of anonymous arguments, no name, just an order. `**kwargs` is the dictionary with all named arguments.
 
 Examples:
-```
+```groovy
 def my_fct(*args, **kwargs):
     print("{} - {}".format(args, kwargs))
 
@@ -384,7 +386,7 @@ my_fct("School", 12, name="Best", number=89) # ('School', 12) - {'name': 'Best',
 Perfect? Of course you can mix both, but the order should be first all anonymous arguments, and after named arguments.
 
 Last example:
-```
+```groovy
 def my_fct(*args, **kwargs):
     print("{} - {}".format(args, kwargs))
 
@@ -396,12 +398,11 @@ my_fct(**a_dict) # () - {'age': 89, 'name': 'Best'}
 ```
 You can play with these 2 arguments to clearly understand where and how your variables are stored.
 
-**`datetime`**
-
+### `datetime`
 `datetime` is a Python module to manipulate date, time etc…
 
 In this example, you create an instance of `datetime` with the current date and time:
-```
+```groovy
 from datetime import datetime
 
 date_now = datetime.now()
@@ -409,14 +410,14 @@ print(type(date_now)) # <class 'datetime.datetime'>
 print(date_now) # 2017-06-08 20:42:42.170922
 ```
 `date_now` is an object, so you can manipulate it:
-```
+```groovy
 from datetime import timedelta
 
 date_tomorrow = date_now + timedelta(days=1)
 print(date_tomorrow) # 2017-06-09 20:42:42.170922
 ```
 … you can also store it:
-```
+```groovy
 a_dict = { 'my_date': date_now }
 print(type(a_dict['my_date'])) # <class 'datetime.datetime'>
 print(a_dict) # {'my_date': datetime.datetime(2017, 6, 8, 20, 42, 42, 170922)}
@@ -424,7 +425,7 @@ print(a_dict) # {'my_date': datetime.datetime(2017, 6, 8, 20, 42, 42, 170922)}
 What? What’s this format when a `datetime` instance is in a datastructure??? It’s unreadable.
 
 How to make it readable: [`strftime`](https://strftime.org/)
-```
+```groovy
 print(date_now.strftime("%A")) # Thursday
 print(date_now.strftime("%A %d %B %Y at %H:%M:%S")) # Thursday 08 June 2017 at 20:42:42
 ```
@@ -432,12 +433,17 @@ print(date_now.strftime("%A %d %B %Y at %H:%M:%S")) # Thursday 08 June 2017 at 2
 
 ![99e1a8f2be8c09d5ce5ac321e8cf39f0917f8db5](https://github.com/elyse502/AirBnB_clone/assets/125453474/3d7ad352-6e69-479b-be7c-96e850e0cb2c)
 
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
+
+![65f4a1dd9c51265f49d0](https://github.com/elyse502/AirBnB_clone/assets/125453474/19069322-8089-4715-bdc2-6420b2e5f5b0)
+
+
 # Background Context
 ### Welcome to the AirBnB clone project!
 Before starting, please read the **AirBnB** concept page.
 
 #### First step: Write a command interpreter to manage your AirBnB objects.
-This is the first step towards building your first full web application: the AirBnB clone. This first step is very important because you will use what you build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
+This is the first step towards building your first full web application: the **AirBnB clone**. This first step is very important because you will use what you build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
 
 Each task is linked and will help you to:
 * put in place a parent class (called `BaseModel`) to take care of the initialization, serialization and deserialization of your future instances
@@ -479,7 +485,22 @@ Do you remember the Shell? It’s exactly the same but limited to a specific use
 * What is `**kwargs` and how to use it
 * How to handle named arguments in a function
 
-# Python Unit Tests
+# Requirements
+## Python Scripts
+* Allowed editors: `vi`, `vim`, `emacs`
+* All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+* All your files should end with a new line
+* The first line of all your files should be exactly `#!/usr/bin/python3`
+* A `README.md` file, at the root of the folder of the project, is mandatory
+* Your code should use the pycodestyle (version `2.8.*`)
+* All your files must be executable
+* The length of your files will be tested using `wc`
+* All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
+* All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
+* All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
+* A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+## Python Unit Tests
 * Allowed editors: `vi`, `vim`, `emacs`
 * All your files should end with a new line
 * All your test files should be inside a folder `tests`
@@ -499,7 +520,7 @@ Do you remember the Shell? It’s exactly the same but limited to a specific use
 # More Info
 ## Execution
 Your shell should work like this in interactive mode:
-```
+```groovy
 $ ./console.py
 (hbnb) help
 
@@ -513,7 +534,7 @@ EOF  help  quit
 $
 ```
 But also in non-interactive mode: (like the Shell project in C)
-```
+```groovy
 $ echo "help" | ./console.py
 (hbnb)
 
@@ -550,12 +571,12 @@ A `README.md`:
 * content to the repository. For format, reference [Docker’s AUTHORS page](https://github.com/moby/moby/blob/master/AUTHORS)
 * You should use branches and pull requests on GitHub - it will help you as team to organize your work
 
-## 1. Be pycodestyle compliant!: [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
+## 1. Be pycodestyle compliant!: [AirBnB_clone](https://github.com/elyse502/AirBnB_clone)
 A beautiful code that passes the pycodestyle checks.
 
-2. Unittests: [AirBnB_clone](https://github.com/elyse502/AirBnB_clone)
+## 2. Unittests: [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
 All your files, classes, functions must be tested with unit tests
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ python3 -m unittest discover tests
 ...................................................................................
 ...................................................................................
@@ -571,7 +592,7 @@ _Note that this is just an example, the number of tests you create can be differ
 **Warning**:
 
 Unit tests must also pass in non-interactive mode:
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ echo "python3 -m unittest discover tests" | bash
 ...................................................................................
 ...................................................................................
@@ -601,7 +622,7 @@ A class `BaseModel` that defines all common attributes/methods for other classes
             * format: `%Y-%m-%dT%H:%M:%S.%f` (ex: `2017-06-14T22:31:03.285259`)
             * you can use `isoformat()` of `datetime` object
         * This method will be the first piece of the serialization/deserialization process: create a dictionary representation with “simple object type” of our `BaseModel`
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ cat test_base_model.py
 #!/usr/bin/python3
 from models.base_model import BaseModel
@@ -636,7 +657,7 @@ guillaume@ubuntu:~/AirBnB$
 Previously we created a method to generate a dictionary representation of an instance (method to_dict()).
 
 Now it’s time to re-create an instance with this dictionary representation.
-```
+```groovy
 <class 'BaseModel'> -> to_dict() -> <class 'dict'> -> <class 'BaseModel'>
 ```
 Update `models/base_model.py`:
@@ -650,7 +671,7 @@ Update `models/base_model.py`:
         * **Warning**: `created_at` and `updated_at` are strings in this dictionary, but inside your `BaseModel` instance is working with `datetime` object. You have to convert these strings into `datetime` object. Tip: you know the string format of these datetime
     * otherwise:
         * create `id` and `created_at` as you did previously (new instance)
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ cat test_base_model_dict.py
 #!/usr/bin/python3
 from models.base_model import BaseModel
@@ -700,7 +721,7 @@ guillaume@ubuntu:~/AirBnB$
 ```
 ## 5. Store first object: [models/engine/file_storage.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/engine/file_storage.py), [models/engine/__init__.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/engine/__init__.py), [models/__init__.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/__init__.py), [models/base_model.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/base_model.py), [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
 Now we can recreate a `BaseModel` from another one by using a dictionary representation:
-```
+```groovy
 <class 'BaseModel'> -> to_dict() -> <class 'dict'> -> <class 'BaseModel'>
 ```
 It’s great but it’s still not persistent: every time you launch the program, you don’t restore all objects created before… The first way you will see here is to save these objects to a file.
@@ -713,7 +734,7 @@ Writing the dictionary representation to a file won’t be relevant:
 So, you will convert the dictionary representation to a JSON string. JSON is a standard representation of a data structure. With this format, humans can read and all programming languages have a JSON reader and writer.
 
 Now the flow of serialization-deserialization will be:
-```
+```groovy
 <class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
 ```
 Magic right?
@@ -744,7 +765,7 @@ Update `models/base_model.py`: to link your `BaseModel` to `FileStorage` by usin
     * call `save(self)` method of `storage`
 * `__init__(self, *args, **kwargs)`:
     * if it’s a new instance (not from a dictionary representation), add a call to the method `new(self)` on `storage`
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ cat test_save_reload_base_model.py
 #!/usr/bin/python3
 from models import storage
@@ -804,12 +825,12 @@ A program called `console.py` that contains the entry point of the command inter
 
 ### Warning:
 You should end your file with:
-```
+```groovy
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
 ```
 to make your program executable except when imported. Please don’t add anything around - the Checker won’t like it otherwise
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) help
 
@@ -866,7 +887,7 @@ Let’s add some rules:
 * Each arguments are separated by a space
 * A string argument with a space must be between double quote
 * The error management starts from the first argument to the last one
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) all MyModel
 ** class doesn't exist **
@@ -906,7 +927,7 @@ A class `User` that inherits from `BaseModel`:
 Update `FileStorage` to manage correctly serialization and deserialization of `User`.
 
 Update your command interpreter (`console.py`) to allow `show`, `create`, `destroy`, `update` and `all` used with `User`.
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ cat test_save_reload_user.py
 #!/usr/bin/python3
 from models import storage
@@ -1017,7 +1038,7 @@ Enjoy your first console!
 
 ## 11. All instances by class name: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 Update your command interpreter (`console.py`) to retrieve all instances of a class by using: `<class name>.all()`.
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) User.all()
 [[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}, [User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}]
@@ -1027,7 +1048,7 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 
 ## 12. Count instances: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 Update your command interpreter (console.py) to retrieve the number of instances of a class: `<class name>.count()`.
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) User.count()
 2
@@ -1039,7 +1060,7 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 Update your command interpreter (`console.py`) to retrieve an instance based on its ID: `<class name>.show(<id>)`.
 
 Errors management must be the same as previously.
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) User.show("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
 [User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}
@@ -1053,7 +1074,7 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 Update your command interpreter (`console.py`) to destroy an instance based on his ID: `<class name>.destroy(<id>)`.
 
 Errors management must be the same as previously.
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) User.count()
 2
@@ -1070,7 +1091,7 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 Update your command interpreter (`console.py`) to update an instance based on his ID: `<class name>.update(<id>, <attribute name>, <attribute value>)`.
 
 Errors management must be the same as previously.
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
 [User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
@@ -1088,7 +1109,7 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 Update your command interpreter (`console.py`) to update an instance based on his ID with a dictionary: `<class name>.update(<id>, <dictionary representation>)`.
 
 Errors management must be the same as previously.
-```
+```groovy
 guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
 [User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 23, 'first_name': 'Bob', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 15, 32, 299055), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
@@ -1105,7 +1126,7 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 Write all unittests for `console.py`, all features!
 
 For testing the console, you should “intercept” STDOUT of it, we highly recommend you to use:
-```
+```groovy
 with patch('sys.stdout', new=StringIO()) as f:
     HBNBCommand().onecmd("help show")
 ```
@@ -1115,7 +1136,7 @@ Otherwise, you will have to re-write the console by replacing `precmd` by `defau
 _[NIYIBIZI Elysée](https://mail.google.com/mail/u/0/#inbox) | [Github](https://github.com/elyse502) | [Linkedin](https://www.linkedin.com/in/niyibizi-elys%C3%A9e/) | [Twitter](https://twitter.com/Niyibizi_Elyse)._
 
 ## Acknowledgements 🤝
-All work contained in this project was completed as part of the curriculum for Alx-Holberton School. Alx-Holberton School is a Remote-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit [This link](https://www.alxafrica.com/).
+_All work contained in this project was completed as part of the curriculum for Alx-Holberton School. Alx-Holberton School is a Remote-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information_, visit [This link](https://www.alxafrica.com/).
 
 <p align="center">
 <h2 align="center"><img align="center" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/ab3c1e01-2b98-47ae-96b7-37c07c85a2f1" alt="footer" width="150"  height="150"/></h2>
