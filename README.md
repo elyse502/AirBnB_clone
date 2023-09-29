@@ -63,7 +63,7 @@ The Alx-HolbertonBnB console can be run both interactively and non-interactively
 To run the console in non-interactive mode, pipe any command(s) into an execution 
 of the file `console.py` at the command line.
 
-```bash
+```groovy
 $ echo "help" | ./console.py
 (hbnb) 
 Documented commands (type help <topic>):
@@ -77,13 +77,13 @@ $
 Alternatively, to use the Alx-HolbertonBnB console in interactive mode, run the 
 file `console.py` by itself:
 
-```bash
+```groovy
 $ ./console.py
 ```
 
 While running in interactive mode, the console displays a prompt for input:
 
-```bash
+```groovy
 $ ./console.py
 (hbnb) 
 ```
@@ -91,13 +91,13 @@ $ ./console.py
 To quit the console, enter the command `quit`, or input an EOF signal 
 (`ctrl-D`).
 
-```bash
+```groovy
 $ ./console.py
 (hbnb) quit
 $
 ```
 
-```bash
+```groovy
 $ ./console.py
 (hbnb) EOF
 $
@@ -113,7 +113,7 @@ The Alx-HolbertonBnB console supports the following commands:
 Creates a new instance of a given class. The class' ID is printed and 
 the instance is saved to the file `file.json`.
 
-```bash
+```groovy
 $ ./console.py
 (hbnb) create BaseModel
 5a32fde1-ccb3-496c-9e5c-76530240a506
@@ -127,7 +127,7 @@ $ cat file.json ; echo ""
 
 Prints the string representation of a class instance based on a given id.
 
-```bash
+```groovy
 $ ./console.py
 (hbnb) create User
 d874272e-2fd9-4e81-a9f5-9845e0dd494d
@@ -145,7 +145,7 @@ d874272e-2fd9-4e81-a9f5-9845e0dd494d
 Deletes a class instance based on a given id. The storage file `file.json` 
 is updated accordingly.
 
-```bash
+```groovy
 $ ./console.py
 (hbnb) create State
 d2d789cd-7427-4920-aaae-88cbcf8bffe2
@@ -165,7 +165,7 @@ $ cat file.json ; echo ""
 Prints the string representations of all instances of a given class. If no 
 class name is provided, the command prints all instances of every class.
 
-```bash
+```groovy
 $ ./console.py
 (hbnb) create BaseModel
 b4cd1fe5-dbe2-4af9-be93-861737eb2116
@@ -192,7 +192,7 @@ b4cd1fe5-dbe2-4af9-be93-861737eb2116
 
 Retrieves the number of instances of a given class.
 
-```bash
+```groovy
 $ ./console.py
 (hbnb) create Place
 12c73223-f3d3-4dec-9629-bd19c8fadd8a
@@ -219,7 +219,7 @@ key/value attribute pair, only "simple" attributes can be updated (ie. not
 `id`, `created_at`, and `updated_at`). However, any attribute can be updated by 
 providing a dictionary.
 
-```bash
+```groovy
 $ ./console.py
 (hbnb) create User
 33478803-5242-4f95-b254-b770ef4d335e
@@ -243,13 +243,13 @@ $ ./console.py
 Unittests for the Alx-HolbertonBnB project are defined in the [tests](./tests) 
 folder. To run the entire test suite simultaneously, execute the following command:
 
-```bash
+```groovy
 $ python3 -m unittest discover tests
 ```
 
 Alternatively, you can specify a single test file to run at a time:
 
-```bash
+```groovy
 $ python3 -m unittest tests/test_console.py
 ```
 
@@ -258,7 +258,7 @@ $ python3 -m unittest tests/test_console.py
 2. _Joseph Kimuchu | [Github](https://github.com/KimuchuJr) | [Linkedin](https://www.linkedin.com/in/joseph-kimuchu-2a6031224/)._
 
 ## Acknowledgements 🤝
-All work contained in this project was completed as part of the curriculum for Alx-Holberton School. Alx-Holberton School is a Remote-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit [This link](https://www.alxafrica.com/).
+_All work contained in this project was completed as part of the curriculum for Alx-Holberton School. Alx-Holberton School is a Remote-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information_, visit [This link](https://www.alxafrica.com/).
 
 <p align="center">
 <h2 align="center"><img align="center" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/ab3c1e01-2b98-47ae-96b7-37c07c85a2f1" alt="footer" width="150"  height="150"/></h2>
