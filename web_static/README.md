@@ -3,7 +3,11 @@ _For this project, we expect you to look at these concepts:_
 * [HTML/CSS](https://intranet.alxswe.com/concepts/2)
 * [The trinity of front-end quality](https://intranet.alxswe.com/concepts/4)
 
-## 1. HTML/CSS
+<br />
+<details>
+    <summary>Click to show/hide Content</summary><br />
+  
+# 1. HTML/CSS
 Open web technologies (such as HTML and CSS) have three most peculiar particularities compared to other technologies:
 * Because anyone is meant to be allowed to code an interpreter for those languages (that what browsers are!), people making decisions on those technologies are part of an open consortium of companies (called the W3C), which operates on consensus; therefore they evolve rather slowly.
 * Reverse compatibility is among the most important values kept in mind when deciding on evolutions, because newest browsers should keep being able to run older websites, and older browsers should be able to access newest websites.
@@ -155,6 +159,9 @@ More about the viewport: https://developer.mozilla.org/en-US/docs/Mozilla/Mobile
 * Many of the CSS concepts on this page are introduced and demoed on this very visual and well-polished website: http://learnlayout.com
 * “Like the CSS spec, but readable”, according to Kaelig (one of your mentors who is a front-end engineer at Salesforce): http://book.mixu.net/css/
 
+<br />
+<hr /><br />
+
 # 2. The trinity of front-end quality
 Have you noticed that this concept does not contain any link? By now, you should be able to find your own sources, based on the proper technical terms we’ll keep giving you in the concepts, usually introduced in bold font.
 
@@ -220,6 +227,10 @@ Typically, the way measures are done is:
 
  _This is Google Chrome’s diagnostic of the stackoverflow.com website, with cache cleared. As you can see, the back-end performance of generating the HTML page is 180ms (actually way less, if you remove the round-trip the data is doing) out of 1.30s to finish. Load time is 1.11s, which is not too bad!_
 
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
+
+</details>
+
 # Background Context
 ## Web static, what?
 Now that you have a command interpreter for managing your AirBnB objects, it’s time to make them alive!
@@ -282,6 +293,8 @@ Before starting, please fork or clone the repository `AirBnB_clone` from your pa
 
 ![hbnb_step1](https://github.com/elyse502/AirBnB_clone/assets/125453474/4b8e54fb-5e71-4968-825d-79300962387f)
 
+<br /><hr /><br />
+
 # Tasks📃
 ## 0. Inline styling: [0-index.html](0-index.html)
 An HTML page that displays a header and a footer.
@@ -309,6 +322,8 @@ Requirements:
 
 <img width="2160" alt="98f4ac1b0644512ce7ae91a9e8e61e8fe174911d" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/868930eb-362d-493f-8548-24c7f130de90">
 
+---
+
 ## 1. Head styling: [1-index.html](1-index.html)
 An HTML page that displays a header and a footer by using the `style` tag in the `head` tag (same as `0-index.html`)
 
@@ -319,6 +334,8 @@ Requirements:
 * You must use the `style` tag in the `head` tag
 
 The layout must be exactly the same as `0-index.html`
+
+---
 
 ## 2. CSS files: [2-index.html](2-index.html), [styles/2-common.css](styles/2-common.css), [styles/2-header.css](styles/2-header.css), [styles/2-footer.css](styles/2-footer.css)
 An n HTML page that displays a header and a footer by using CSS files (same as `1-index.html`)
@@ -332,6 +349,8 @@ Requirements:
   * `styles/2-footer.css`: for footer style
 
 The layout must be exactly the same as `1-index.html`
+
+---
 
 ## 3. Zoning done!: [3-index.html](3-index.html), [styles/3-common.css](styles/3-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [images/](images/)
 An HTML page that displays a header and footer by using CSS files (same as `2-index.html`)
@@ -369,6 +388,8 @@ Requirements:
   * `styles/3-footer.css`: for the footer style
 
 <img width="2160" alt="2be1eda05a0d9097c210f2d3482a59aa858c5711" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/b1313ef7-d7f8-44af-947a-c7e80a71f5da">
+
+---
 
 ## 4. Search!: [4-index.html](4-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/4-filters.css](styles/4-filters.css), [images/](images/)
 An HTML page that displays a header, footer and a filters box with a search button.
@@ -417,6 +438,8 @@ Requirements:
 
 <img width="2160" alt="f959154b0cdf1cdf71ddef04e3787ef28462793e" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/9c60c3ba-de6f-4f5c-b3b2-c8f59ecf1c33">
 
+---
+
 ## 5. More filters: [5-index.html](5-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/5-filters.css](styles/5-filters.css), [images/](images/)
 An HTML page that displays a header, footer and a filters box.
 
@@ -452,6 +475,8 @@ Requirements:
 
 <img width="2160" alt="85bfa50b96c2985723daa75b5e22f75ef16e2b2e" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/bb78f403-2f99-4c53-8f5a-530754f87392">
 
+---
+
 ## 6. It's (h)over: [6-index.html](6-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/6-filters.css](styles/6-filters.css), [images/](images/)
 An HTML page that displays a header, footer and a filters box with dropdown.
 
@@ -485,6 +510,8 @@ Requirements:
 <img width="2160" alt="6262f13624dca23ca19db505c44f88faddb82ebb" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/b0ac0582-9270-4e18-92e5-b87cde13b623">
 
 <img width="2160" alt="6e6bdfa13fa88a5f439d9e2b1dade826dd95529b" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/7ce1d2a8-8fb7-43c8-be03-43ee87181f79">
+
+---
 
 ## 7. Display results: [7-index.html](7-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/6-filters.css](styles/6-filters.css), [styles/7-places.css](styles/7-places.css), [images/](images/)
 An HTML page that displays a header, footer, a filters box with dropdown and results.
@@ -523,6 +550,8 @@ Requirements:
     * `styles/7-places.css`: for the places style
 
 <img width="2160" alt="bca4d17fbe21a58b66a9d5d6b85df4801d147dd0" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/1dc61beb-d910-4337-b27f-dce3fd7edb65">
+
+---
 
 ## 8. More details: [8-index.html](8-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/6-filters.css](styles/6-filters.css), [styles/8-places.css](styles/8-places.css), [images/](images/)
 An HTML page that displays a header, a footer, a filter box (dropdown list) and the result of the search.
@@ -588,6 +617,8 @@ Requirements:
 
 <img width="1604" alt="f4b2d4ef94bd3a2e7e1ddefa81236595686d270e" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/98a1db79-51ce-4096-9b4e-747c05da5bac">
 
+---
+
 ## 9. Full details: [100-index.html](100-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/6-filters.css](styles/6-filters.css), [styles/100-places.css](styles/100-places.css), [images/](images/)
 An HTML page that displays a header, footer, a filters box with dropdown and results.
 
@@ -640,18 +671,24 @@ Requirements:
 
 <img width="2160" alt="f54486a431a05ea3477e337e0e953686d3c6ffd0" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/24ee9e61-b92c-43f7-82f2-9b1fea3e9d4f">
 
+---
+
 ## 10. Flex: [101-index.html](101-index.html), [styles/4-common.css](styles/4-common.css), [styles/3-header.css](styles/3-header.css), [styles/3-footer.css](styles/3-footer.css), [styles/6-filters.css](styles/6-filters.css), [styles/101-places.css](styles/101-places.css), [images/](images/)
 Improve the Places section by using [Flexible boxes](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for all Place articles
 
 [Flexbox Froggy](https://flexboxfroggy.com/)
 
+---
+
 ## 11. Responsive design: [102-index.html](102-index.html), [styles/102-common.css](styles/102-common.css), [styles/102-header.css](styles/102-header.css), [styles/102-footer.css](styles/102-footer.css), [styles/102-filters.css](styles/102-filters.css), [styles/102-places.css](styles/102-places.css), [images/](images/)
-mprove the page by adding [responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) to display correctly in mobile or small screens.
+Improve the page by adding [responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) to display correctly in mobile or small screens.
 
 Examples:
 * no horizontal scrolling
 * redesign search bar depending of the width
 * etc.
+
+---
 
 ## 12. Accessibility: [103-index.html](103-index.html), [styles/103-common.css](styles/103-common.css), [styles/103-header.css](styles/103-header.css), [styles/103-footer.css](styles/103-footer.css), [styles/103-filters.css](styles/103-filters.css), [styles/103-places.css](styles/103-places.css), [images/](images/)
 Improve the page by adding [Accessibility support](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
@@ -661,6 +698,8 @@ Examples:
 * Header tags
 * etc.
 
+---
+
 ## Author :black_nib:
 _[NIYIBIZI Elysée](https://mail.google.com/mail/u/0/#inbox) | [Github](https://github.com/elyse502) | [Linkedin](https://www.linkedin.com/in/niyibizi-elys%C3%A9e/) | [Twitter](https://twitter.com/Niyibizi_Elyse)._
 
@@ -669,15 +708,6 @@ All work contained in this project was completed as part of the curriculum for A
 
 <p align="center">
 <h2 align="center"><img align="center" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/ab3c1e01-2b98-47ae-96b7-37c07c85a2f1" alt="footer" width="150"  height="150"/></h2>
-
-
-
-
-
-
-
-
-
 
 
 
