@@ -1,5 +1,5 @@
 # AirBnB clone
-Alx-HolbertonBnB is a complete web application, integrating database storage, a back-end API, and front-end interfacing in a clone of AirBnB.
+**Alx-HolbertonBnB** is a complete web application, integrating database storage, a back-end API, and front-end interfacing in a clone of AirBnB.
 
 The project currently only implements the back-end console.
 
@@ -7,6 +7,10 @@ The project currently only implements the back-end console.
 _For this project, we expect you to look at these concepts:_
 * [Python packages](https://intranet.alxswe.com/concepts/66)
 * [AirBnB clone](https://intranet.alxswe.com/concepts/74)
+
+<br />
+<details>
+    <summary>Click to show/hide Content</summary><br />
 
 # 1. Python packages
 Read: [Packages](https://docs.python.org/3.4/tutorial/modules.html#packages)
@@ -190,6 +194,10 @@ False
 True
 $
 ```
+
+<br />
+<hr /><br />
+
 # 2. AirBnB clone
 
 ![65f4a1dd9c51265f49d0](https://github.com/elyse502/AirBnB_clone/assets/125453474/acf08a8b-f4e4-47b6-b32e-25d73c434b32)
@@ -434,9 +442,10 @@ print(date_now.strftime("%A %d %B %Y at %H:%M:%S")) # Thursday 08 June 2017 at 2
 ![99e1a8f2be8c09d5ce5ac321e8cf39f0917f8db5](https://github.com/elyse502/AirBnB_clone/assets/125453474/3d7ad352-6e69-479b-be7c-96e850e0cb2c)
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
+    
+</details>
 
 ![65f4a1dd9c51265f49d0](https://github.com/elyse502/AirBnB_clone/assets/125453474/19069322-8089-4715-bdc2-6420b2e5f5b0)
-
 
 # Background Context
 ### Welcome to the AirBnB clone project!
@@ -559,6 +568,8 @@ All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest
 
 ![815046647d23428a14ca](https://github.com/elyse502/AirBnB_clone/assets/125453474/850db2f3-a0e2-4c18-bb54-eb4a491705a0)
 
+<br /><hr />
+
 # Tasks📃
 ## 0. README, AUTHORS: [README.md](https://github.com/elyse502/AirBnB_clone/blob/master/README.md), [AUTHORS](https://github.com/elyse502/AirBnB_clone/blob/master/AUTHORS)
 A `README.md`:
@@ -571,8 +582,12 @@ A `README.md`:
 * content to the repository. For format, reference [Docker’s AUTHORS page](https://github.com/moby/moby/blob/master/AUTHORS)
 * You should use branches and pull requests on GitHub - it will help you as team to organize your work
 
+---
+
 ## 1. Be pycodestyle compliant!: [AirBnB_clone](https://github.com/elyse502/AirBnB_clone)
 A beautiful code that passes the pycodestyle checks.
+
+---
 
 ## 2. Unittests: [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
 All your files, classes, functions must be tested with unit tests
@@ -603,6 +618,9 @@ Ran 189 tests in 13.135s
 OK
 guillaume@ubuntu:~/AirBnB$
 ```
+
+---
+
 ## 3. BaseModel: [models/base_model.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/base_model.py), [models/__init__.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/__init__.py), [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
 A class `BaseModel` that defines all common attributes/methods for other classes:
 * `models/base_model.py`
@@ -653,6 +671,9 @@ JSON of my_model:
 
 guillaume@ubuntu:~/AirBnB$
 ```
+
+---
+
 ## 4. Create BaseModel from dictionary: [models/base_model.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/base_model.py), [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
 Previously we created a method to generate a dictionary representation of an instance (method to_dict()).
 
@@ -719,6 +740,9 @@ JSON of my_model:
 False
 guillaume@ubuntu:~/AirBnB$
 ```
+
+---
+
 ## 5. Store first object: [models/engine/file_storage.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/engine/file_storage.py), [models/engine/__init__.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/engine/__init__.py), [models/__init__.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/__init__.py), [models/base_model.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/base_model.py), [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
 Now we can recreate a `BaseModel` from another one by using a dictionary representation:
 ```groovy
@@ -812,6 +836,9 @@ guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
 {"BaseModel.e79e744a-55d4-45a3-b74a-ca5fae74e0e2": {"__class__": "BaseModel", "id": "e79e744a-55d4-45a3-b74a-ca5fae74e0e2", "updated_at": "2017-09-28T21:08:06.151750", "created_at": "2017-09-28T21:08:06.151711", "name": "My_First_Model", "my_number": 89}, "BaseModel.080cce84-c574-4230-b82a-9acb74ad5e8c": {"__class__": "BaseModel", "id": "080cce84-c574-4230-b82a-9acb74ad5e8c", "updated_at": "2017-09-28T21:07:51.973308", "created_at": "2017-09-28T21:07:51.973301", "name": "My_First_Model", "my_number": 89}, "BaseModel.ee49c413-023a-4b49-bd28-f2936c95460d": {"__class__": "BaseModel", "id": "ee49c413-023a-4b49-bd28-f2936c95460d", "updated_at": "2017-09-28T21:07:25.047381", "created_at": "2017-09-28T21:07:25.047372", "name": "My_First_Model", "my_number": 89}}
 guillaume@ubuntu:~/AirBnB$
 ```
+
+---
+
 ## 6. Console 0.0.1: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 A program called `console.py` that contains the entry point of the command interpreter:
 * You must use the module `cmd`
@@ -848,6 +875,8 @@ Quit command to exit the program
 guillaume@ubuntu:~/AirBnB$ 
 ```
 #### No unittests needed
+
+---
 
 ## 7. Console 0.1: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 Update your command interpreter (`console.py`) to have these commands:
@@ -915,6 +944,9 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 ** no instance found **
 (hbnb) 
 ```
+
+---
+
 ## 8. First User: [models/user.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/user.py), [models/engine/file_storage.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/engine/file_storage.py), [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py), [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
 A class `User` that inherits from `BaseModel`:
 * `models/user.py`
@@ -995,6 +1027,8 @@ guillaume@ubuntu:~/AirBnB$
 ```
 #### No unittests needed for the console
 
+---
+
 # 9. More classes!: [models/state.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/state.py), [models/city.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/amenity.py), [models/amenity.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/amenity.py), [models/place.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/place.py), [models/review.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/review.py), [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
 
 Write all those classes that inherit from `BaseModel`:
@@ -1027,6 +1061,8 @@ Write all those classes that inherit from `BaseModel`:
         * `user_id`: string - empty string: it will be the `User.id`
         * `text`: string - empty string
 
+---
+
 ## 10. Console 1.0: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py), [models/engine/file_storage.py](https://github.com/elyse502/AirBnB_clone/blob/master/models/engine/file_storage.py), [tests/](https://github.com/elyse502/AirBnB_clone/tree/master/tests)
 Update `FileStorage` to manage correctly serialization and deserialization of all our new classes: `Place`, `State`, `City`, `Amenity` and `Review`
 
@@ -1035,6 +1071,8 @@ Update your command interpreter (`console.py`) to allow those actions: `show`, `
 Enjoy your first console!
 
 #### No unittests needed for the console
+
+---
 
 ## 11. All instances by class name: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 Update your command interpreter (`console.py`) to retrieve all instances of a class by using: `<class name>.all()`.
@@ -1046,6 +1084,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 ``` 
 #### No unittests needed
 
+---
+
 ## 12. Count instances: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 Update your command interpreter (console.py) to retrieve the number of instances of a class: `<class name>.count()`.
 ```groovy
@@ -1055,6 +1095,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb)
 ```
 #### No unittests needed
+
+---
 
 ## 13. Show: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 Update your command interpreter (`console.py`) to retrieve an instance based on its ID: `<class name>.show(<id>)`.
@@ -1069,6 +1111,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) 
 ```
 #### No unittests needed
+
+---
 
 ## 14. Destroy: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 Update your command interpreter (`console.py`) to destroy an instance based on his ID: `<class name>.destroy(<id>)`.
@@ -1086,6 +1130,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) 
 ````
 #### No unittests needed
+
+---
 
 ## 15. Update: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 Update your command interpreter (`console.py`) to update an instance based on his ID: `<class name>.update(<id>, <attribute name>, <attribute value>)`.
@@ -1105,6 +1151,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 ```
 #### No unittests needed
 
+---
+
 ## 16. Update from dictionary: [console.py](https://github.com/elyse502/AirBnB_clone/blob/master/console.py)
 Update your command interpreter (`console.py`) to update an instance based on his ID with a dictionary: `<class name>.update(<id>, <dictionary representation>)`.
 
@@ -1122,6 +1170,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 ```
 #### No unittests needed
 
+---
+
 ## 17. Unittests for the Console!: [tests/test_console.py](https://github.com/elyse502/AirBnB_clone/blob/master/tests/test_console.py)
 Write all unittests for `console.py`, all features!
 
@@ -1131,6 +1181,8 @@ with patch('sys.stdout', new=StringIO()) as f:
     HBNBCommand().onecmd("help show")
 ```
 Otherwise, you will have to re-write the console by replacing `precmd` by `default`.
+
+<hr />
 
 ## Author :black_nib:
 _[NIYIBIZI Elysée](https://mail.google.com/mail/u/0/#inbox) | [Github](https://github.com/elyse502) | [Linkedin](https://www.linkedin.com/in/niyibizi-elys%C3%A9e/) | [Twitter](https://twitter.com/Niyibizi_Elyse)._
